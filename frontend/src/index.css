@@ -1,0 +1,1138 @@
+/* fonts */
+@font-face {
+  font-family: Cairo;
+  src: url(./assets/Fonts/Cairo-Regular.ttf);
+}
+@font-face {
+  font-family: CairoLight;
+  src: url(./assets/Fonts/Cairo-Light.ttf);
+}
+@font-face {
+  font-family: CairoBold;
+  src: url(./assets/Fonts/Cairo-Bold.ttf);
+}
+@font-face {
+  font-family: CairoBlack;
+  src: url(./assets/Fonts/Cairo-Black.ttf);
+}
+@font-face {
+  font-family: CairoLighter;
+  src: url(./assets/Fonts/Cairo-ExtraLight.ttf);
+}
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: Cairo;
+  font-weight: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s linear;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* begin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  background-color: #84a9ac;
+
+  color: white;
+  box-shadow: 5px -3px 0 10px #e4e3e347;
+  height: fit-content;
+  padding: 30px 30px;
+}
+
+@media only screen and (max-width: 700px) {
+  header {
+    border-radius: 0% !important;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+a.primary,
+button.primary {
+  font-family: CairoLight;
+  font-size: 17px;
+  color: #84a9ac;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px 15px;
+  border: 1px solid white;
+  width: fit-content;
+  outline: none;
+}
+a.primary:hover,
+button.primary {
+  color: white;
+  background-color: #84a9ac;
+}
+/* Navbar */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+header h1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-family: CairoLight;
+  margin: 0 0 0 50px;
+}
+nav div {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  justify-content: space-between;
+  width: 100%;
+}
+nav div a {
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: 1px solid transparent;
+  margin-left: 20px;
+}
+nav div a:hover {
+  border-color: white;
+}
+nav div a:nth-child(3) {
+  font-family: CairoLight;
+  font-size: 17px;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: 1px solid white;
+}
+nav div a:nth-child(3):hover {
+  background-color: white;
+  color: #84a9ac;
+}
+/* hero */
+section.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-right-radius: 50px;
+  width: 90%;
+  background-color: #84a9ac;
+  color: white;
+  padding: 60px 0 60px 70px;
+}
+section.hero img {
+  position: absolute;
+  max-width: 25%;
+  width: 25%;
+  height: auto;
+  margin: 0 0 10% 65%;
+}
+
+@media only screen and (max-width: 700px) {
+  section.hero {
+    width: 100%;
+    border-radius: 0;
+  }
+  section.hero img {
+    position: relative;
+    width: 75%;
+    max-width: 100%;
+    margin: 3% auto;
+  }
+}
+
+section.hero .left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+section.hero .left h1 {
+  font-size: 36px;
+  width: 75%;
+  line-height: 50px;
+}
+section.hero .left p {
+  font-family: CairoLighter;
+  font-size: 20px;
+  width: 50%;
+  margin: 20px 0;
+}
+/* main */
+main.home div.about {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0;
+}
+main.home div.imgabout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+main.home div.about h1 {
+  font-size: 35px;
+}
+main.home div.about h2 {
+  font-family: CairoLight;
+  color: #3b6978;
+  font-size: 20px;
+  text-align: center;
+  width: 50%;
+  line-height: 30px;
+}
+main.home img {
+  width: 100%;
+  max-height: 450px;
+  height: auto;
+  object-fit: contain;
+}
+main.home section.service {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+main.home section.service h1 {
+  font-size: 35px;
+}
+main.home section.service div.cardholder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 50px 0;
+}
+
+main.home section.service div.cardholder .card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 175px;
+  margin: 5%;
+}
+main.home section.service div.cardholder .card h2 {
+  font-size: 25px;
+}
+main.home section.service div.cardholder .card img {
+  width: 50px;
+  height: 50px;
+}
+main.home section.service div.cardholder .card p {
+  text-align: center;
+  font-family: CairoLight;
+  color: #3b6978;
+}
+
+main.home section.analyse {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  background-color: #84a9ac;
+  padding: 5%;
+  border-radius: 50px;
+  color: white;
+  box-shadow: -3px 5px 0 10px #e4e3e347;
+  width: 90%;
+}
+
+main.home section.analyse div.left {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+main.home section.analyse div.left img {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 5%;
+  object-fit: contain;
+}
+
+main.home section.analyse div.left div.keys {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20%;
+}
+
+main.home section.analyse div.left div.keys span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main.home section.analyse div.left div.keys span div {
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+}
+
+main.home section.analyse div.left div.keys span:first-child div {
+  background-color: #3f3d56;
+}
+main.home section.analyse div.left div.keys span:nth-child(2) div {
+  background-color: #e2e2e2;
+}
+main.home section.analyse div.left div.keys span:last-child div {
+  background-color: #3b6978;
+}
+
+main.home section.analyse div.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+main.home section.analyse div.right h1 {
+  font-size: 40px;
+  font-family: Cairo;
+  text-align: center;
+  color: white;
+}
+
+main.home section.analyse div.right p {
+  font-size: 20px;
+  width: 50%;
+  line-height: 25px;
+  text-align: center;
+  font-family: CairoLight;
+  margin: 4% auto;
+}
+
+main.home section.analyse div.right img {
+  width: 100%;
+}
+
+main.home div.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10% 0 10% 0;
+  height: 150px;
+}
+
+main.home div.start h1 {
+  text-align: center;
+  font-size: 35px;
+}
+main.home div.start a {
+  font-family: CairoLight;
+  font-size: 20px;
+  color: white;
+  border-radius: 15px;
+  background-color: #84a9ac;
+  padding: 10px 25px;
+  border: 1px solid #84a9ac;
+  width: fit-content;
+}
+main.home div.start a:hover {
+  background-color: #3b6978;
+  color: #84a9ac;
+}
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 0 auto;
+  width: 90%;
+  background-color: #84a9ac;
+  border-radius: 0 0 0 50px;
+  color: white;
+  box-shadow: -3px 5px 0 10px #e4e3e347;
+  padding: 15px 30px 20px 30px;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+footer div h1 {
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 700px) {
+  footer {
+    flex-direction: column;
+    border-radius: 0%;
+    width: 100%;
+  }
+  footer div {
+    margin: 30px 0;
+  }
+}
+
+/* about us */
+main.aboutus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 150px auto;
+  height: 100%;
+}
+main.aboutus h1 {
+  font-size: 35px;
+  text-align: center;
+}
+main.aboutus div.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 250px;
+  margin: 50px 0;
+}
+main.aboutus div.row div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
+}
+main.aboutus div.row h1 {
+  font-size: 25px;
+  text-align: center;
+}
+main.aboutus div.row h3 {
+  color: #ccc;
+  text-align: center;
+}
+main.aboutus div.row p {
+  width: 65%;
+  color: #3b6978;
+  text-align: center;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
+/* pricing */
+main.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 10% auto;
+}
+main.pricing h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main.pricing div.columnholder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+main.pricing div.columnholder div.column:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 350px;
+  width: 350px;
+  background-color: #f9f9f9;
+  border: 1px solid #e4e3e3;
+  border-radius: 20px;
+}
+main.pricing div.columnholder div.column:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 350px;
+  width: 350px;
+  background-color: #f9f9f9;
+  border: 1px solid #e4e3e3;
+  border-radius: 20px;
+}
+
+main.pricing div.columnholder div.column h1 {
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 950px) {
+  main.pricing div.columnholder div.column {
+    padding: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+/* profile */
+main.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+main.profile div.card-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 150px;
+  margin: 0 0 50px 0;
+}
+main.profile div.card-main input.image,
+main.profile div.card-main img {
+  position: relative;
+  left: 25px;
+}
+main.profile div.card-main input.image,
+main.profile div.card-main img,
+main.profile div.row div.card input.image,
+main.profile div.row div.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 20px -5px #c3c3c3;
+}
+main.profile div.row div.card input.image {
+  position: relative;
+  right: 50px;
+}
+main.profile div.card-main div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+}
+main.profile div.card-main div h1 {
+  position: static;
+  font-family: Cairo;
+  font-size: 25px;
+}
+main.profile div.card-main div h3 {
+  font-size: 22px;
+  font-family: CairoLight;
+  opacity: 0.5;
+}
+main.profile div.card-main div p {
+  font-size: 22px;
+  font-family: CairoLight;
+  color: #3d3d3d;
+}
+main.profile div.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+main.profile div.row.last {
+  margin: 0 0 50px 0;
+}
+main.profile div.row div.line,
+main.profile div.spacer div.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+main.profile div.row div.line div:first-child,
+main.profile div.spacer div.line div:first-child {
+  width: 2.5px;
+  height: 200px;
+  background-color: black;
+}
+main.profile div.row div.line div:last-child {
+  width: 100px;
+  height: 2.5px;
+  background-color: black;
+}
+main.profile div.row div.line div:first-child.deadline {
+  width: 2.5;
+  height: 76px;
+  background-color: black;
+  position: relative;
+  bottom: 37px;
+}
+main.profile div.spacer div.line div:last-child {
+  width: 100px;
+  height: 2.5px;
+  background-color: transparent;
+}
+main.profile div.spacer h6 {
+  position: relative;
+  top: 100px;
+  left: 50px;
+  color: #c3c3c3;
+}
+main.profile div.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: 200px;
+}
+main.profile div.card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  width: 500px;
+}
+main.profile div.card div h1 {
+  font-size: 22px;
+}
+main.profile div.card div h3 {
+  font-size: 18px;
+  font-family: CairoLight;
+  opacity: 0.5;
+}
+main.profile div.card div p {
+  font-size: 18px;
+  font-family: CairoLight;
+  color: #3d3d3d;
+}
+main.profile div.card button {
+  padding: 20px;
+  background-color: #e79e4f;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+main.profile div.spacer {
+  width: 70%;
+  height: 150px;
+  display: flex;
+}
+.custom-file-input {
+  outline: none;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  position: relative;
+  top: 60px;
+  left: 22px;
+  content: "Pick a picture";
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+main.profile div.add-form {
+  width: 60%;
+  margin: 50px;
+}
+main.profile div.add-form h1 {
+  font-family: CairoBold;
+  font-size: 25px;
+  align-self: flex-start;
+  height: 50px;
+}
+main.profile div.add-form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main.profile div.add-form div input {
+  background-position: 15px 15px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  padding: 20px 50px;
+  background-color: #f4f4f4;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  outline: none;
+}
+main.profile div.add-form div input:focus {
+  border-color: #3d3d3d;
+}
+main.profile div.add-form div input:first-child {
+  background-image: url(./assets/images/profileIcon.png);
+}
+main.profile div.add-form div input:nth-child(2) {
+  background-position: 15px 17.5px;
+  background-image: url(./assets/images/emailIcon.png);
+}
+main.profile div.add-form div input:nth-child(3) {
+  background-image: url(./assets/images/passwordIcon.png);
+}
+/* rate */
+main.rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 150px;
+}
+
+main.rate h1 {
+  font-size: 35px;
+}
+
+main.rate h2 {
+  font-size: 20px;
+}
+
+main.rate h3 {
+  font-size: 20px;
+  color: #808080;
+}
+
+main.rate img {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+main.rate textarea {
+  margin: 50px;
+  width: 500px;
+  height: 225px;
+  resize: none;
+  overflow: auto;
+}
+
+main.rate button {
+  font-family: CairoLight;
+  font-size: 20px;
+  color: white;
+  border-radius: 15px;
+  background-color: #84a9ac;
+  padding: 10px 25px;
+  border: 1px solid #84a9ac;
+  width: fit-content;
+}
+main.rate button:hover {
+  background-color: white;
+  color: #84a9ac;
+}
+
+/* sign */
+section.sign {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.sign div.left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  background-color: #84a9ac;
+  box-shadow: 10px 0 0 0 #f4f4f4;
+}
+section.sign div.left div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  color: white;
+}
+section.sign div.left h1 {
+  font-size: 50px;
+  position: static;
+}
+section.sign div.left h2 {
+  text-align: center;
+  width: 300px;
+  font-family: CairoLight;
+  font-size: 25px;
+}
+section.sign div.left .primary {
+  font-family: Cairo;
+  font-size: 25px;
+  color: white;
+  padding: 10px 40px 13px 40px;
+  background-color: #84a9ac;
+  border-color: white;
+  border-radius: 10px;
+  border-width: 2px;
+}
+section.sign div.left .primary:hover {
+  color: #84a9ac;
+  background-color: white;
+}
+section.sign div.right {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+section.sign div.right h1 {
+  color: #3b6978;
+  font-size: large;
+  text-transform: uppercase;
+
+  position: static;
+}
+section.sign div.right div {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  margin: 100px 0;
+}
+section.sign div.right div input {
+  background-position: 15px 15px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  padding: 20px 50px;
+  background-color: #f4f4f4;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  outline: none;
+}
+section.sign div.right div input:focus {
+  border-color: #3d3d3d;
+}
+section.sign div.right div input:first-child {
+  background-image: url(./assets/images/profileIcon.png);
+}
+section.sign div.right div input:nth-child(2) {
+  background-position: 15px 17.5px;
+  background-image: url(./assets/images/emailIcon.png);
+}
+section.sign div.right div input:nth-child(3) {
+  background-image: url(./assets/images/passwordIcon.png);
+}
+section.sign div.right div .primary {
+  position: relative;
+  bottom: -70px;
+  font-family: Cairo;
+  font-size: 25px;
+  padding: 10px 40px 13px 40px;
+  color: #84a9ac;
+  border-color: #84a9ac;
+  border-width: 2px;
+}
+section.sign div.right div .primary:hover {
+  color: white;
+  background-color: #84a9ac;
+}
+
+@media only screen and (max-width: 700px) {
+  section.sign div.left {
+    width: 100%;
+  }
+
+  section.sign div.right {
+    width: 100%;
+  }
+
+  section.sign div.right h1 {
+    margin-top: 5%;
+  }
+}
+
+/* login */
+section.login {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+div.login__a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a.login_a h1 {
+  text-align: center;
+  position: absolute;
+  color: #3d3d3d;
+  font-size: 45px;
+}
+section.login div.right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  background-color: #84a9ac;
+  box-shadow: -10px 0 0 0 #f4f4f4;
+}
+section.login div.right div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  color: white;
+}
+section.login div.right h1 {
+  font-size: 50px;
+  position: static;
+  color: white;
+}
+section.login div.right h2 {
+  text-align: center;
+  width: 350px;
+  font-family: CairoLight;
+  font-size: 25px;
+}
+section.login div.right .primary {
+  font-family: Cairo;
+  font-size: 25px;
+  color: white;
+  padding: 10px 40px 13px 40px;
+  background-color: #84a9ac;
+  border-color: white;
+  border-radius: 10px;
+  border-width: 2px;
+}
+section.login div.right .primary:hover {
+  color: #84a9ac;
+  background-color: white;
+}
+section.login div.left {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+  section.login div.left {
+    width: 100%;
+  }
+
+  section.login div.right {
+    width: 100%;
+  }
+}
+
+section.login div.left h1 {
+  font-size: 50px;
+  position: static;
+}
+section.login div.left h1 {
+  color: #3d3d3d;
+  position: static;
+}
+section.login div.left div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  margin: 100px 0;
+}
+section.login div.left div input {
+  background-position: 15px 15px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  padding: 20px 50px;
+  background-color: #f4f4f4;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  outline: none;
+}
+section.login div.left div input:focus {
+  border-color: #3b6978;
+}
+section.login div.left div span:first-child input {
+  background-image: url(./assets/images/profileIcon.png);
+}
+section.login div.left div span:nth-child(2) input {
+  background-image: url(./assets/images/passwordIcon.png);
+}
+section.login div.left div span p {
+  padding: 5px 0;
+  color: #959595;
+  cursor: pointer;
+}
+section.login div.left div span p:hover {
+  color: #3d3d3d;
+}
+section.login div.left div .primary {
+  position: relative;
+  bottom: -70px;
+  font-family: Cairo;
+  font-size: 25px;
+  padding: 10px 40px 13px 40px;
+  color: #84a9ac;
+  border-color: #84a9ac;
+  border-width: 2px;
+}
+section.login div.left div .primary:hover {
+  color: white;
+  background-color: #84a9ac;
+}
