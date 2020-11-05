@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const shortid = require("shortid");
-const HashPass = require("../utils/Crypto");
+const HashPass = require("../utils/crypto");
 const EmployeeModel = require("./employee.model");
 const jwt = require("jsonwebtoken");
 
